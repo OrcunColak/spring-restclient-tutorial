@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/quote")
 public class QuoteController {
@@ -14,6 +16,12 @@ public class QuoteController {
     @GetMapping("/getquote")
     public String getQuote() {
         return "quote";
+    }
+
+    // http://localhost:8080/api/v1/quote/getquotelist
+    @GetMapping("/getquotelist")
+    public List<String> getQuoteList() {
+        return List.of("quote1", "quote1");
     }
 
     // http://localhost:8080/api/v1/quote/newgetquote
