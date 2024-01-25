@@ -6,7 +6,7 @@ import org.springframework.web.client.RestClient;
 
 @Service
 @RequiredArgsConstructor
-public class GetService {
+public class RestClientService {
 
     private final RestClient followRedirectRestClient;
 

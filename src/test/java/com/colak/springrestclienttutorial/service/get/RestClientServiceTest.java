@@ -8,10 +8,10 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class GetServiceTest {
+class RestClientServiceTest {
 
     @Autowired
-    private GetService getService;
+    private RestClientService restClientService;
 
     @LocalServerPort
     int randomPort;
@@ -19,14 +19,14 @@ class GetServiceTest {
     @Test
     void downloadPage() {
         String url = "http://localhost:" + randomPort + "/api/v1/quote/getquote";
-        String page = getService.downloadPage(url);
+        String page = restClientService.downloadPage(url);
         assertThat(page).isEqualTo("quote");
     }
 
     @Test
     void downloadPageWithRedirect() {
         String url = "http://localhost:" + randomPort + "/api/v1/quote/redirect";
-        String page = getService.downloadPageWithRedirect(url);
+        String page = restClientService.downloadPageWithRedirect(url);
         assertThat(page).isEqualTo("new quote");
     }
 
