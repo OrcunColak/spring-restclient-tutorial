@@ -1,4 +1,4 @@
-package com.colak.springrestclienttutorial.service.get;
+package com.colak.springrestclienttutorial.service.restclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.colak.springrestclienttutorial.service.get;
+package com.colak.springrestclienttutorial.service.restclient;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

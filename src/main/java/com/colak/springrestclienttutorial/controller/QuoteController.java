@@ -1,8 +1,12 @@
 package com.colak.springrestclienttutorial.controller;
 
+import com.colak.springrestclienttutorial.dto.QuoteRequestDto;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,6 +32,11 @@ public class QuoteController {
     @GetMapping("/newgetquote")
     public String getNewQuote() {
         return "new quote";
+    }
+
+    @PostMapping(value = "/addquote", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String addNewQuote(@RequestBody QuoteRequestDto quoteRequestDto) {
+        return "Added new quote " + quoteRequestDto.quote();
     }
 
     // http://localhost:8080/api/v1/quote/redirect
