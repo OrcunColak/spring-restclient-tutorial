@@ -10,7 +10,7 @@ public class RestClientService {
 
     private final RestClient followRedirectRestClient;
 
-    public String downloadPage(String url) {
+    public String getString(String url) {
         return RestClient.create()
                 .get()
                 .uri(url)
@@ -18,7 +18,7 @@ public class RestClientService {
                 .body(String.class);
     }
 
-    public String downloadPageWithRedirect(String url) {
+    public String getStringWithRedirect(String url) {
         return followRedirectRestClient
                 .get()
                 .uri(url)

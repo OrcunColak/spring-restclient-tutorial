@@ -12,10 +12,14 @@ import java.util.List;
 @Service
 public class RestTemplateService {
 
+    public String getString(String url) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject(url,String.class);
+    }
     /**
      * Example that demonstrates how to get using exchange()
      */
-    public List<String> downloadList(String url) {
+    public List<String> getStringList(String url) {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<List<String>> response = restTemplate.exchange(
                 url,

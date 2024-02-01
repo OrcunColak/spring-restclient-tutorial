@@ -9,6 +9,8 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class RestTemplateServiceTest {
 
@@ -19,9 +21,16 @@ class RestTemplateServiceTest {
     int randomPort;
 
     @Test
-    void testDownloadList() {
+    void testGetString() {
+        String url = "http://localhost:" + randomPort + "/api/v1/quote/getquote";
+        String page = restTemplateService.getString(url);
+        assertThat(page).isEqualTo("quote");
+    }
+
+    @Test
+    void testGetStringList() {
         String url = "http://localhost:" + randomPort + "/api/v1/quote/getquotelist";
-        List<String> result = restTemplateService.downloadList(url);
+        List<String> result = restTemplateService.getStringList(url);
         List<String> expected = List.of("quote1", "quote1");
         Assertions.assertEquals(expected, result);
     }

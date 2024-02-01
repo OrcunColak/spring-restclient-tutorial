@@ -17,17 +17,16 @@ class RestClientServiceTest {
     int randomPort;
 
     @Test
-    void downloadPage() {
+    void testGetString() {
         String url = "http://localhost:" + randomPort + "/api/v1/quote/getquote";
-        String page = restClientService.downloadPage(url);
+        String page = restClientService.getString(url);
         assertThat(page).isEqualTo("quote");
     }
 
     @Test
-    void downloadPageWithRedirect() {
+    void testGetStringWithRedirect() {
         String url = "http://localhost:" + randomPort + "/api/v1/quote/redirect";
-        String page = restClientService.downloadPageWithRedirect(url);
+        String page = restClientService.getStringWithRedirect(url);
         assertThat(page).isEqualTo("new quote");
     }
-
 }
