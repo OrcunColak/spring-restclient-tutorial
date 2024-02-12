@@ -8,6 +8,10 @@ https://medium.com/@mustafaguc/building-kafka-producer-and-consumer-microservice
 The original idea is from  
 https://medium.com/@mustafaguc/how-to-create-a-web-page-scraper-using-java-virtual-threads-in-spring-boot-microservice-6662e56316ca
 
+# SSL RestClient
+
+I did not implement it but the original idea is from  
+https://medium.com/@rakeshgr316/securing-restful-connections-enabling-and-disabling-ssl-with-spring-boot-bdf3e6a26711
 
 # ResponseBodyAdvice
 
