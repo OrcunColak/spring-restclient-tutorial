@@ -8,10 +8,6 @@ https://medium.com/@mustafaguc/building-kafka-producer-and-consumer-microservice
 The original idea is from  
 https://medium.com/@mustafaguc/how-to-create-a-web-page-scraper-using-java-virtual-threads-in-spring-boot-microservice-6662e56316ca
 
-# Logging RestTemplate
-
-The original idea is from  
-https://lejdiprifti.medium.com/log-http-requests-with-resttemplate-17c30495b12d
 
 # ResponseBodyAdvice
 
