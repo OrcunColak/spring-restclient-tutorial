@@ -1,5 +1,6 @@
 package com.colak.springrestclienttutorial.service.restclient;
 
+import com.colak.springrestclienttutorial.dto.QuoteRequestDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,6 +22,14 @@ class RestClientServiceTest {
         String url = "http://localhost:" + randomPort + "/api/v1/quote/getquote";
         String page = restClientService.getString(url);
         assertThat(page).isEqualTo("quote");
+    }
+
+    @Test
+    void testPostForObject() {
+        String url = "http://localhost:" + randomPort + "/api/v1/quote/addquote";
+        QuoteRequestDto quoteRequestDto = new QuoteRequestDto("my-quote");
+        String page = restClientService.postForObject(url, quoteRequestDto);
+        assertThat(page).isEqualTo("Added new quote my-quote");
     }
 
     @Test
