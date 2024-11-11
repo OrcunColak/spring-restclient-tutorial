@@ -1,8 +1,21 @@
-# RestClient.Builder
+# Builder
 
-There is no such class
+Use
 
-# RestClient
+```
+RestClient weatherClient = RestClient.builder()
+  .baseUrl("https://api.openweathermap.org")
+  .defaultHeader("request-id", "req1")
+  .build();
+```
+
+# Default RestClient
+
+Use
+
+```
+RestClient defaultClient = RestClient.create();
+```
 
 The original idea is from  
 https://medium.com/@mustafaguc/building-kafka-producer-and-consumer-microservices-with-spring-boot-on-kubernetes-using-github-0bd0af37e538
