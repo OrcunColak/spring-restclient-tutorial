@@ -1,6 +1,6 @@
-package com.colak.springrestclienttutorial.service.restclient;
+package com.colak.springtutorial.service.restclient;
 
-import com.colak.springrestclienttutorial.dto.QuoteRequestDto;
+import com.colak.springtutorial.dto.QuoteRequestDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package com.colak.springrestclienttutorial.service.restclient;
+package com.colak.springtutorial.service.restclient;
 
-import com.colak.springrestclienttutorial.dto.QuoteRequestDto;
+import com.colak.springtutorial.dto.QuoteRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;

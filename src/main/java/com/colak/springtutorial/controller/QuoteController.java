@@ -1,6 +1,6 @@
-package com.colak.springrestclienttutorial.controller;
+package com.colak.springtutorial.controller;
 
-import com.colak.springrestclienttutorial.dto.QuoteRequestDto;
+import com.colak.springtutorial.dto.QuoteRequestDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
